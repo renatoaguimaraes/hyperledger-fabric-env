@@ -7,7 +7,7 @@ docker-compose up
 
 ## Hyperledger Fabric 1.0.0-alpha2
 
-### Concepts
+### Architecture
 
 #### Transactions
 
@@ -24,6 +24,14 @@ The latest state of the blockchain (or, simply, state) is modeled as a versioned
 Ledger provides a verifiable history of all successful state changes (we talk about valid transactions) and unsuccessful attempts to change state (we talk about invalid transactions), occurring during the operation of the system.
 
 Ledger is constructed by the ordering service as a totally ordered hashchain of blocks of (valid or invalid) transactions.
+
+### Nodes
+
+**Client** or **submitting-client**: a client that submits an actual transaction-invocation to the endorsers, and broadcasts transaction-proposals to the ordering service.
+
+**Peer**: a node that commits transactions and maintains the state and a copy of the ledger (see Sec, 1.2). Besides, peers can have a special endorser role.
+
+**Ordering-service-node or orderer**: a node running the communication service that implements a delivery guarantee, such as atomic or total order broadcast.
 
 #### Peer
 
