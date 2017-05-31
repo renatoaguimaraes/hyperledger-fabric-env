@@ -34,3 +34,14 @@ Start environment
 CHANNEL_NAME=<channel-ID> TIMEOUT=60 docker-compose -f docker-compose-cli.yaml up 
 ```
 
+Stop environment
+```
+docker-compose -f docker-compose-cli.yaml down
+```
+or 
+```
+docker rm -f $(docker ps -aq)
+```
+
+
+
